@@ -1,0 +1,58 @@
+{
+  "name": "n8n-nodes-asr",
+  "version": "0.1.0",  
+  "description": "N8N node for processing audio files via an ASR service",
+  "keywords": [
+    "n8n-community-node-package",
+    "asr",
+    "audio",
+    "transcription"
+  ],
+  "license": "MIT", 
+  "homepage": "https://github.com/your-username/n8n-nodes-asr", 
+  "author": {
+    "name": "Your Name", 
+    "email": "your.email@example.com" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/n8n-nodes-asr.git" 
+  },
+  "main": "dist/nodes/Asr/Asr.node.js", 
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint nodes credentials --ext .ts --fix",
+    "lint:fix": "eslint nodes credentials --ext .ts --fix",
+    "format": "prettier --write nodes credentials",
+    "test": "echo \"Error: no test specified\" && exit 1" 
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/AsrApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Asr/Asr.node.js"
+    ]
+  },
+  "dependencies": {
+    "form-data": "^4.0.2",
+    "n8n-core": "^1.86.1",
+    "n8n-workflow": "^1.82.0"
+  },
+  "devDependencies": {
+    "@types/form-data": "^2.2.1",
+    "@types/node": "^20.14.1", 
+    "@types/request-promise-native": "^1.0.21",
+    "@typescript-eslint/parser": "^7.18.0", 
+    "eslint": "^8.57.0", 
+    "gulp": "^4.0.2", 
+    "prettier": "^3.3.3", 
+    "request-promise-native": "^1.0.9",
+    "typescript": "^5.5.4" 
+  }
+}
